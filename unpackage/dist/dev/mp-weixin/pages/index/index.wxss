@@ -1,0 +1,44 @@
+.header-image {
+  width: 100%;
+  height: 60px;
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+.container .content {
+  padding: 10px;
+}
+.container .content .header-image {
+  width: 100%;
+  height: 60px;
+}
+.container .content .index_login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.container .content .index_login .index_login_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0px 4px 0px #c9c9c9;
+  border-radius: 5px;
+}
+.container .content .index_login .index_login_left > view {
+  margin: 5px 0;
+}
+.container .content .index_login .index_login_right_look {
+  box-shadow: 0 0px 4px 0px #c9c9c9;
+  border-radius: 5px;
+  line-height: 20px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .content .index_login > view {
+  width: 48%;
+}

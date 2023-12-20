@@ -1,0 +1,26 @@
+page {
+  min-height: 100%;
+}
+.container {
+  padding: 40rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  background-color: #efeff4;
+  height: 100%;
+}
+.container .title {
+  font-size: 14px;
+  color: #b0b4bc;
+  margin-bottom: 200px;
+}
+.container .agree {
+  display: flex;
+  align-items: center;
+}
+.container .checklist-group {
+  display: flex;
+  flex-direction: column !important;
+}
+.container .checklist-group .checklist-box {
+  margin: 10px 0 !important;
+}

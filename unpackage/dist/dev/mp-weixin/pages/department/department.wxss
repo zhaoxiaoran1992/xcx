@@ -1,0 +1,27 @@
+page {
+  padding-bottom: 30px;
+}
+.department {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0px 4px 0px #c9c9c9;
+  font-size: 14px;
+  line-height: 30px;
+}
+.phone {
+  display: inline-block;
+}
+.phone .u-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1rpx solid #c9c9c9;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+.phone .u-icon .uicon-phone-fill {
+  position: relative;
+  left: 2px;
+}

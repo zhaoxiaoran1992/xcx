@@ -134,5 +134,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/九江小程序2/uni_modules/uview-plus/components/u--text/u--text.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/zhaoxiaoran/Documents/xcx/uni_modules/uview-plus/components/u--text/u--text.vue"]]);
 wx.createComponent(Component);

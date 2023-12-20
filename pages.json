@@ -31,7 +31,7 @@
 				"navigationBarTitleText" : "投诉维权指南",
 				"enablePullDownRefresh" : false
 			}
-		}
+		},
 		{
 			"path" : "pages/provision/provision",
 			"style" : 
@@ -39,15 +39,15 @@
 				"navigationBarTitleText" : "条款",
 				"enablePullDownRefresh" : false
 			}
-		},
-		// {
-		// 	"path" : "pages/complaintForm/complaintForm",
-		// 	"style" : 
-		// 	{
-		// 		"navigationBarTitleText" : "投诉内容",
-		// 		"enablePullDownRefresh" : false
-		// 	}
-		// }
+		}
+		{
+			"path" : "pages/complaintForm/complaintForm",
+			"style" : 
+			{
+				"navigationBarTitleText" : "投诉内容",
+				"enablePullDownRefresh" : false
+			}
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

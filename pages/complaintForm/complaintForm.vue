@@ -1,123 +1,116 @@
 <template>
 	<view class="container">
-		<uni-forms ref="form" :modelValue="formData" :rules="rules" label-width="120px">
-			<uni-group title="基本信息" margin-top="20">
-				<uni-forms-item label="反映人姓名" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入反映人姓名" />
-				</uni-forms-item>
-				<uni-forms-item label="反映人联系方式" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入反映人联系方式" maxlength="13" />
-				</uni-forms-item>
-				<uni-forms-item label="反映人身份证号" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入反映人身份证号" />
-				</uni-forms-item>
-				<uni-forms-item label="事发地" required name="name">
+		<u-form labelPosition="left" :model="formData" :rules="rules" ref="uForm" labelWidth="120px" :borderBottom="true">
+			<view class="u_group">
+				<text>基本信息</text>
+			</view>
+			<view class="content">
+				<u-form-item label="反映人姓名" required name="name">
+					<u-input  v-model="formData.name" border="none" placeholder="请输入反映人姓名" clearable></u-input>
+				</u-form-item>
+				<u-form-item label="反映人联系方式" required name="name">
+					<u-input type='number' border="none" v-model="formData.name" placeholder="请输入反映人联系方式" maxlength="13" />
+				</u-form-item>
+				<u-form-item label="反映人身份证号" required name="name">
+					<u-input type='idcard' border="none" v-model="formData.name" placeholder="请输入反映人身份证号" />
+				</u-form-item>
+				<u-form-item label="事发地" required name="name">
 					<uni-data-picker
-						:inputBorder="false"
+						border="none"
 						placeholder="请选择事发地"
 						popup-title="请选择事发地"
 						:localdata="dataTree"
 						v-model="formData.name"
 						@change="onchange"
 					></uni-data-picker>
-				</uni-forms-item>
-				<uni-forms-item label="事发时间" required name="name">
-					<uni-datetime-picker
-						type="date"
-						:end="dayjs().format('YYYY-MM-DD')"
-						:border="false"
-						v-model="formData.name"
-						@change="onchange"
-						style='padding-left: 10px;'
-					>
-					<uni-easyinput solt='default' :inputBorder="false" v-model="formData.name" placeholder="请选择事发时间" />
+				</u-form-item>
+				<u-form-item label="事发时间" required name="name">
+					<uni-datetime-picker type="date" :end="dayjs().format('YYYY-MM-DD')" :border="false" v-model="formData.name" @change="onchange" style="padding-left: 10px">
+						<u-input solt="default" border="none" v-model="formData.name" placeholder="请选择事发时间" />
 					</uni-datetime-picker>
-					
-				</uni-forms-item>
-				<uni-forms-item label="信访涉及人数" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入信访涉及人数" />
-				</uni-forms-item>
-				<uni-forms-item label="投诉单位名称" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入投诉单位名称" />
-				</uni-forms-item>
-				<uni-forms-item label="单位负责人姓名" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入单位负责人姓名" />
-				</uni-forms-item>
-				<uni-forms-item label="单位负责人联系方式" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入单位负责人联系方式" maxlength="13" />
-				</uni-forms-item>
-				<uni-forms-item label="单位地址" required name="name">
-					<uni-easyinput :inputBorder="false" v-model="formData.name" placeholder="请输入单位地址" />
-				</uni-forms-item>
-				<uni-forms-item label="单位行业分类" required name="name">
+				</u-form-item>
+				<u-form-item label="信访涉及人数" required name="name">
+					<u-input type='digit' border="none" v-model="formData.name" placeholder="请输入信访涉及人数" />
+				</u-form-item>
+				<u-form-item label="投诉单位名称" required name="name">
+					<u-input border="none" v-model="formData.name" placeholder="请输入投诉单位名称" />
+				</u-form-item>
+				<u-form-item label="单位负责人姓名" required name="name">
+					<u-input border="none" v-model="formData.name" placeholder="请输入单位负责人姓名" />
+				</u-form-item>
+				<u-form-item label="单位负责人联系方式" required name="name">
+					<u-input border="none" v-model="formData.name" placeholder="请输入单位负责人联系方式" maxlength="13" />
+				</u-form-item>
+				<u-form-item label="单位地址" required name="name">
+					<u-input border="none" v-model="formData.name" placeholder="请输入单位地址" />
+				</u-form-item>
+				<u-form-item label="单位行业分类" required name="name">
 					<uni-data-picker
-						:inputBorder="false"
+						border="none"
 						placeholder="请选择单位行业分类"
 						popup-title="请选择单位行业分类"
 						:localdata="dataTree"
 						v-model="formData.name"
 						@change="onchange"
 					></uni-data-picker>
-				</uni-forms-item>
-			</uni-group>
+				</u-form-item>
+			</view>
 			<uni-group title="工程建设领域额外填写项" margin-top="20" v-if="dd">
-				
-				<uni-forms-item label="涉及项目名称" required name="name">
+				<u-form-item label="涉及项目名称" required name="name">
 					<uni-data-picker
-						:inputBorder="false"
+						border="none"
 						placeholder="请选择涉及项目名称"
 						popup-title="请选择涉及项目名称"
 						:localdata="dataTree"
 						v-model="formData.name"
 						@change="onchange"
 					></uni-data-picker>
-				</uni-forms-item>
-				<uni-forms-item label="项目投资分类" required name="name">
+				</u-form-item>
+				<u-form-item label="项目投资分类" required name="name">
 					<uni-data-picker
-						:inputBorder="false"
+						border="none"
 						placeholder="请选择项目投资分类"
 						popup-title="请选择项目投资分类"
 						:localdata="dataTree"
 						v-model="formData.name"
 						@change="onchange"
 					></uni-data-picker>
-				</uni-forms-item>
-				<uni-forms-item label="项目主管单位分类" required name="name">
+				</u-form-item>
+				<u-form-item label="项目主管单位分类" required name="name">
 					<uni-data-picker
-						:inputBorder="false"
+						border="none"
 						placeholder="请选择项目主管单位分类"
 						popup-title="请选择项目主管单位分类"
 						:localdata="dataTree"
 						v-model="formData.name"
 						@change="onchange"
 					></uni-data-picker>
-				</uni-forms-item>
+				</u-form-item>
 			</uni-group>
 			<uni-group title="投诉内容" margin-top="20" v-if="dd">
-				
-				<uni-forms-item label="投诉分类" required name="name">
+				<u-form-item label="投诉分类" required name="name">
 					<classify></classify>
-				</uni-forms-item>
-				<uni-forms-item label="基本情况摘要" required name="name">
-					<uni-easyinput type="textarea" autoHeight v-model="formData.name" placeholder="请输入基本情况摘要"></uni-easyinput>
-				</uni-forms-item>
-				<uni-forms-item label="投诉附件" required name="name">
+				</u-form-item>
+				<u-form-item label="基本情况摘要" required name="name">
+					<u-input type="textarea" autoHeight v-model="formData.name" placeholder="请输入基本情况摘要"></u-input>
+				</u-form-item>
+				<u-form-item label="投诉附件" required name="name">
 					<uni-file-picker limit="9" file-mediatype="video" title="最多选择9个视频"></uni-file-picker>
-				</uni-forms-item>
+				</u-form-item>
 			</uni-group>
-		</uni-forms>
-		<button type="default" @click="submit" style="background-color: #007aff; color: #fff;margin:15px;">下一步</button>
+		</u-form>
+		<button type="default" @click="submit" style="background-color: #007aff; color: #fff; margin: 15px">下一步</button>
 	</view>
 </template>
 
 <script>
 import dayjs from 'dayjs';
-import classify from './cpts/classify.vue'
+import classify from './cpts/classify.vue';
 export default {
-	components:{classify},
+	components: { classify },
 	data() {
 		return {
-			dd:true,
+			dd: true,
 			dayjs,
 			formData: {
 				name: ''
@@ -195,7 +188,7 @@ export default {
 	onLoad: function (option) {
 		//option为object类型，会序列化上个页面传递的参数
 		console.log(option.name); //打印出上个页面传递的参数。
-		this.dd=option.name==0?true:false
+		this.dd = option.name == 0 ? true : false;
 	}
 };
 </script>
@@ -210,11 +203,21 @@ page {
 	line-height: 48rpx;
 	background-color: #fff;
 	height: 100%;
+	.u_group{
+		    background: #f1ebeb;
+		    color: #8e8c8c;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 10px;
+	}
+	.content{
+		padding:0 20px;
+	}
 	.input-value-border {
 		border: none !important;
 	}
-	.icon-calendar{
-		display:none;
+	.icon-calendar {
+		display: none;
 	}
 }
 </style>

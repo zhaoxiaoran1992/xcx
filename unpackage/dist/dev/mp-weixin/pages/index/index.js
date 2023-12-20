@@ -144,19 +144,19 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
         }),
         q: common_vendor.f(indexList, (item, index, i0) => {
           return {
-            a: "e9ee7a52-14-" + i0 + "," + ("e9ee7a52-13-" + i0),
+            a: "258cdf84-14-" + i0 + "," + ("258cdf84-13-" + i0),
             b: common_vendor.p({
               shape: "square",
               size: "35",
               src: item.url,
               customStyle: "margin: -3px 5px -3px 0"
             }),
-            c: "e9ee7a52-13-" + i0 + "," + ("e9ee7a52-12-" + i0),
+            c: "258cdf84-13-" + i0 + "," + ("258cdf84-12-" + i0),
             d: common_vendor.p({
               title: `列表长度-${index + 1}`
             }),
             e: index,
-            f: "e9ee7a52-12-" + i0 + ",e9ee7a52-11"
+            f: "258cdf84-12-" + i0 + ",258cdf84-11"
           };
         }),
         r: common_vendor.o(scrolltolower),
@@ -179,5 +179,5 @@ const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
     };
   }
 });
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/九江小程序2/pages/index/index.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/zhaoxiaoran/Documents/xcx/pages/index/index.vue"]]);
 wx.createPage(MiniProgramPage);

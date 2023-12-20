@@ -133,5 +133,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     d: common_vendor.s(_ctx.$u.addStyle(_ctx.customStyle))
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-12f6646d"], ["__file", "D:/九江小程序2/uni_modules/uview-plus/components/u-link/u-link.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-12f6646d"], ["__file", "/Users/zhaoxiaoran/Documents/xcx/uni_modules/uview-plus/components/u-link/u-link.vue"]]);
 wx.createComponent(Component);

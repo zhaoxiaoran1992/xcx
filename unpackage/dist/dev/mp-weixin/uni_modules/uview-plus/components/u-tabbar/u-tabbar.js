@@ -167,5 +167,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     g: $data.placeholderHeight + "px"
   } : {});
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b9276d10"], ["__file", "D:/九江小程序2/uni_modules/uview-plus/components/u-tabbar/u-tabbar.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b9276d10"], ["__file", "/Users/zhaoxiaoran/Documents/xcx/uni_modules/uview-plus/components/u-tabbar/u-tabbar.vue"]]);
 wx.createComponent(Component);

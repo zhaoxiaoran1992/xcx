@@ -117,7 +117,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: common_vendor.t(item.address),
         c: common_vendor.t(item.Telephone.length > 10 ? item.Telephone : "0792-" + item.Telephone),
         d: common_vendor.o(($event) => $options.makePhoneCall(item.Telephone), index),
-        e: "02a0c231-0-" + i0,
+        e: "73f93ad8-0-" + i0,
         f: index
       };
     }),
@@ -128,5 +128,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/九江小程序2/pages/department/department.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/zhaoxiaoran/Documents/xcx/pages/department/department.vue"]]);
 wx.createPage(MiniProgramPage);

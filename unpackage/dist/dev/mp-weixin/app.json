@@ -4,7 +4,8 @@
     "pages/complaint/complaint",
     "pages/department/department",
     "pages/guide/guide",
-    "pages/provision/provision"
+    "pages/provision/provision",
+    "pages/complaintForm/complaintForm"
   ],
   "window": {
     "navigationBarTextStyle": "black",

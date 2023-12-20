@@ -126,6 +126,7 @@ if (!Math) {
   "./pages/department/department.js";
   "./pages/guide/guide.js";
   "./pages/provision/provision.js";
+  "./pages/complaintForm/complaintForm.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -157,7 +158,7 @@ const _sfc_main = {
     }
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/九江小程序2/App.vue"]]);
+const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/zhaoxiaoran/Documents/xcx/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);
   app.use(uni_modules_uviewPlus_index.uviewPlus);

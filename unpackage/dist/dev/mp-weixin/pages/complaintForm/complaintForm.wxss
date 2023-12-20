@@ -1,0 +1,26 @@
+page {
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+.container {
+  font-size: 28rpx;
+  line-height: 48rpx;
+  background-color: #fff;
+  height: 100%;
+}
+.container .u_group {
+  background: #f1ebeb;
+  color: #8e8c8c;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.container .content {
+  padding: 0 20px;
+}
+.container .input-value-border {
+  border: none !important;
+}
+.container .icon-calendar {
+  display: none;
+}

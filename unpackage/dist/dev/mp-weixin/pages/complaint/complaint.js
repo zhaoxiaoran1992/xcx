@@ -1,138 +1,145 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
-const _sfc_main = {
-  data() {
-    return {
-      tabbarData: 1,
-      industry: [
-        {
-          text: "工程建设领域",
-          value: "0"
-        },
-        {
-          text: "非工程建设领域",
-          value: "1"
-        }
-      ],
-      hobby: [
-        {
-          text: "同意使用须知:",
-          value: 0
-        }
-      ],
-      // 表单数据
-      formData: {
-        name: "0",
-        hobbys: []
-      },
-      rules: {
-        hobbys: {
-          rules: [
-            {
-              format: "array"
-            },
-            {
-              validateFunction: function(rule, value, data, callback) {
-                if (value.length < 1) {
-                  callback("请勾选使用须知");
-                }
-                return true;
-              }
-            }
-          ]
-        }
-      }
-    };
-  },
-  methods: {
-    navigateTo(url) {
-      common_vendor.index.navigateTo({
-        url
-      });
-    },
-    redirectTo(url) {
-      common_vendor.index.redirectTo({
-        url
-      });
-    },
-    /**
-     * 复写 binddata 方法，如果只是为了校验，无复杂自定义操作，可忽略此方法
-     * @param {String} name 字段名称
-     * @param {String} value 表单域的值
-     */
-    // binddata(name,value){
-    // 通过 input 事件设置表单指定 name 的值
-    //   this.$refs.form.setValue(name, value)
-    // },
-    // 触发提交表单
-    submit() {
-      this.$refs.form.validate().then((res) => {
-        console.log("表单数据信息：", res);
-        common_vendor.index.navigateTo({
-          url: "../complaintForm/complaintForm?name=" + this.formData.name
-        });
-      }).catch((err) => {
-        console.log("表单错误信息：", err);
-      });
-    }
-  }
-};
 if (!Array) {
-  const _component_uni_data_checkbox = common_vendor.resolveComponent("uni-data-checkbox");
-  const _component_uni_forms_item = common_vendor.resolveComponent("uni-forms-item");
-  const _component_uni_forms = common_vendor.resolveComponent("uni-forms");
+  const _easycom_u_radio2 = common_vendor.resolveComponent("u-radio");
+  const _easycom_u_radio_group2 = common_vendor.resolveComponent("u-radio-group");
+  const _easycom_u_form_item2 = common_vendor.resolveComponent("u-form-item");
+  const _easycom_u_checkbox2 = common_vendor.resolveComponent("u-checkbox");
+  const _easycom_u_checkbox_group2 = common_vendor.resolveComponent("u-checkbox-group");
+  const _easycom_u_button2 = common_vendor.resolveComponent("u-button");
   const _easycom_u_tabbar_item2 = common_vendor.resolveComponent("u-tabbar-item");
   const _easycom_u_tabbar2 = common_vendor.resolveComponent("u-tabbar");
-  (_component_uni_data_checkbox + _component_uni_forms_item + _component_uni_forms + _easycom_u_tabbar_item2 + _easycom_u_tabbar2)();
+  (_easycom_u_radio2 + _easycom_u_radio_group2 + _easycom_u_form_item2 + _easycom_u_checkbox2 + _easycom_u_checkbox_group2 + _easycom_u_button2 + _easycom_u_tabbar_item2 + _easycom_u_tabbar2)();
 }
+const _easycom_u_radio = () => "../../uni_modules/uview-plus/components/u-radio/u-radio.js";
+const _easycom_u_radio_group = () => "../../uni_modules/uview-plus/components/u-radio-group/u-radio-group.js";
+const _easycom_u_form_item = () => "../../uni_modules/uview-plus/components/u-form-item/u-form-item.js";
+const _easycom_u_checkbox = () => "../../uni_modules/uview-plus/components/u-checkbox/u-checkbox.js";
+const _easycom_u_checkbox_group = () => "../../uni_modules/uview-plus/components/u-checkbox-group/u-checkbox-group.js";
+const _easycom_u_button = () => "../../uni_modules/uview-plus/components/u-button/u-button.js";
 const _easycom_u_tabbar_item = () => "../../uni_modules/uview-plus/components/u-tabbar-item/u-tabbar-item.js";
 const _easycom_u_tabbar = () => "../../uni_modules/uview-plus/components/u-tabbar/u-tabbar.js";
 if (!Math) {
-  (_easycom_u_tabbar_item + _easycom_u_tabbar)();
+  (_easycom_u_radio + _easycom_u_radio_group + _easycom_u_form_item + _easycom_u_checkbox + _easycom_u_checkbox_group + common_vendor.unref(uForm) + _easycom_u_button + _easycom_u_tabbar_item + _easycom_u_tabbar)();
 }
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
-    a: common_vendor.p({
-      value: $data.formData.name,
-      localdata: $data.industry,
-      selectedColor: "#1abc39"
-    }),
-    b: common_vendor.p({
-      name: "name"
-    }),
-    c: common_vendor.o(($event) => $data.formData.hobbys = $event),
-    d: common_vendor.p({
-      multiple: true,
-      localdata: $data.hobby,
-      selectedTextColor: "#000",
-      modelValue: $data.formData.hobbys
-    }),
-    e: common_vendor.o(($event) => $options.navigateTo("../provision/provision")),
-    f: common_vendor.p({
-      name: "hobbys"
-    }),
-    g: common_vendor.sr("form", "e51f3a6e-0"),
-    h: common_vendor.p({
-      modelValue: $data.formData,
-      rules: $data.rules
-    }),
-    i: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
-    j: common_vendor.o(($event) => $options.redirectTo("/pages/index/index")),
-    k: common_vendor.p({
-      text: "首页",
-      icon: "home-fill"
-    }),
-    l: common_vendor.p({
-      text: "我要投诉",
-      icon: "chat-fill"
-    }),
-    m: common_vendor.p({
-      value: $data.tabbarData,
-      fixed: true,
-      placeholder: true,
-      safeAreaInsetBottom: true
-    })
-  };
-}
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/九江小程序2/pages/complaint/complaint.vue"]]);
+const _sfc_main = /* @__PURE__ */ common_vendor.defineComponent({
+  __name: "complaint",
+  setup(__props) {
+    const tabbarData = common_vendor.ref(1);
+    const uForm2 = common_vendor.ref();
+    const userInfo = common_vendor.reactive({
+      name: "0"
+    });
+    const rules = common_vendor.reactive({
+      "userInfo.name": {
+        type: "string",
+        required: true,
+        message: "请填写姓名",
+        trigger: ["blur", "change"]
+      },
+      "userInfo.sex": {
+        type: "string",
+        max: 1,
+        required: true,
+        message: "请选择男或女",
+        trigger: ["blur", "change"]
+      }
+    });
+    const checkboxValue1 = common_vendor.ref([]);
+    const redirectTo = (url) => {
+      common_vendor.index.redirectTo({
+        url
+      });
+    };
+    const navigateTo = (url) => {
+      common_vendor.index.navigateTo({
+        url
+      });
+    };
+    console.log("uni======>", common_vendor.index);
+    const submit = () => {
+      common_vendor.index.navigateTo({
+        url: "../complaintForm/complaintForm?name=" + userInfo.name
+      });
+      uForm2.value.validate().then((res) => {
+        common_vendor.index.$u.toast("校验通过");
+        common_vendor.index.navigateTo({
+          url: "../complaintForm/complaintForm?name=" + userInfo.name
+        });
+      }).catch((errors) => {
+        common_vendor.index.$u.toast("校验失败");
+      });
+    };
+    return (_ctx, _cache) => {
+      return {
+        a: common_vendor.p({
+          shape: "circle",
+          label: "工程建设领域",
+          name: "0",
+          labelSize: "12px"
+        }),
+        b: common_vendor.p({
+          shape: "circle",
+          label: "非工程建设领域",
+          name: "1",
+          labelSize: "12px"
+        }),
+        c: common_vendor.o(($event) => userInfo.name = $event),
+        d: common_vendor.p({
+          placement: "column",
+          size: "14px",
+          modelValue: userInfo.name
+        }),
+        e: common_vendor.sr("item1", "340cd930-1,340cd930-0"),
+        f: common_vendor.p({
+          prop: "userInfo.name",
+          borderBottom: true
+        }),
+        g: common_vendor.p({
+          customStyle: {
+            marginBottom: "8px"
+          },
+          label: "同意使用须知",
+          name: "0"
+        }),
+        h: common_vendor.o(($event) => checkboxValue1.value = $event),
+        i: common_vendor.p({
+          placement: "column",
+          modelValue: checkboxValue1.value
+        }),
+        j: common_vendor.o(($event) => navigateTo("../provision/provision")),
+        k: common_vendor.sr("item1", "340cd930-5,340cd930-0"),
+        l: common_vendor.p({
+          prop: "userInfo.name",
+          borderBottom: true
+        }),
+        m: common_vendor.sr(uForm2, "340cd930-0", {
+          "k": "uForm"
+        }),
+        n: common_vendor.p({
+          labelPosition: "left",
+          model: userInfo,
+          rules
+        }),
+        o: common_vendor.o(submit),
+        p: common_vendor.o(($event) => redirectTo("/pages/index/index")),
+        q: common_vendor.p({
+          text: "首页",
+          icon: "home-fill"
+        }),
+        r: common_vendor.p({
+          text: "我要投诉",
+          icon: "chat-fill"
+        }),
+        s: common_vendor.p({
+          value: tabbarData.value,
+          fixed: true,
+          placeholder: true,
+          safeAreaInsetBottom: true
+        })
+      };
+    };
+  }
+});
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/zhaoxiaoran/Documents/xcx/pages/complaint/complaint.vue"]]);
 wx.createPage(MiniProgramPage);

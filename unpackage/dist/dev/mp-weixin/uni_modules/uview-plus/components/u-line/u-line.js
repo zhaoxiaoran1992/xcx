@@ -124,5 +124,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     a: common_vendor.s($options.lineStyle)
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-72791e59"], ["__file", "D:/九江小程序2/uni_modules/uview-plus/components/u-line/u-line.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-72791e59"], ["__file", "/Users/zhaoxiaoran/Documents/xcx/uni_modules/uview-plus/components/u-line/u-line.vue"]]);
 wx.createComponent(Component);

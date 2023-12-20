@@ -164,5 +164,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     c: common_vendor.n(`u-list-item-${_ctx.anchor}`)
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-0c3fc59c"], ["__file", "D:/九江小程序2/uni_modules/uview-plus/components/u-list-item/u-list-item.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-0c3fc59c"], ["__file", "/Users/zhaoxiaoran/Documents/xcx/uni_modules/uview-plus/components/u-list-item/u-list-item.vue"]]);
 wx.createComponent(Component);
